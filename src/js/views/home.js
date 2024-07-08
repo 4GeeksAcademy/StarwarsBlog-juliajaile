@@ -18,7 +18,7 @@ export const Home = () => {
 
 	return (
 		<div className="container">
-			<div className="mb-5">
+			<div className="cardCointainer">
 				<h1 className="text-danger">Characters</h1>
 				<SimpleBar style={styles}>
 					<div className="d-flex flex-row">
@@ -28,7 +28,7 @@ export const Home = () => {
 					</div>
 				</SimpleBar>
 			</div>
-			<div className="mb-5">
+			<div className="cardCointainer">
 				<h1 className="text-danger">Planets</h1>
 				<SimpleBar style={styles}>
 					<div className="d-flex flex-row mb-3">
@@ -38,7 +38,7 @@ export const Home = () => {
 					</div>
 				</SimpleBar>
 			</div>
-			<div className="mb-5">
+			<div className="cardCointainer">
 				<h1 className="text-danger">Vehicles</h1>
 				<SimpleBar style={styles}>
 					<div className="d-flex flex-row mb-3">
