@@ -10,6 +10,7 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
+			<h1>hello world</h1>
 			<ul className="list-group">
 				{store.demo.map((item, index) => {
 					return (
