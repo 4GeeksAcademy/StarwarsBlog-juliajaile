@@ -22,8 +22,7 @@ export const Home = () => {
 				<h1 className="text-danger">Characters</h1>
 				<SimpleBar style={styles}>
 					<div className="d-flex flex-row">
-						{store.people?.map((person) => (
-							<Card name={person.name} key={person.uid} type={"person"} id={person.uid} />
+						{store.people?.map((person) => (<Card name={person.name} key={person.uid} type={"people"} uid={person.uid} typeImg="characters" />
 						))}
 					</div>
 				</SimpleBar>
@@ -33,17 +32,17 @@ export const Home = () => {
 				<SimpleBar style={styles}>
 					<div className="d-flex flex-row mb-3">
 						{store.planets?.map((planet) => (
-							<Card name={planet.name} key={planet.uid} type={"planet"} id={planet.uid} />
+							<Card name={planet.name} key={planet.uid} type={"planets"} uid={planet.uid} typeImg="planets" />
 						))}
 					</div>
 				</SimpleBar>
 			</div>
-			<div className="cardCointainer">
+			<div className="cardCointainerVehicles">
 				<h1 className="text-danger">Vehicles</h1>
 				<SimpleBar style={styles}>
 					<div className="d-flex flex-row mb-3">
 						{store.vehicles?.map((vehicle) => (
-							<Card name={vehicle.name} key={vehicle.uid} type={"vehicle"} id={vehicle.uid} />
+							<Card name={vehicle.name} key={vehicle.uid} type={"vehicles"} uid={vehicle.uid} typeImg="vehicles" />
 						))}
 					</div>
 				</SimpleBar>

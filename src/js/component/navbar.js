@@ -1,9 +1,15 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import "../../styles/navbar.css";
 import { FaTrash } from "react-icons/fa6";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
+	const handleDeleteFav = () =>{
+		
+
+	}
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
