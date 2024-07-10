@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
+import { FaHeart } from "react-icons/fa6";
+import { FaLaptopCode } from "react-icons/fa6";
+import "../../styles/footer.css";
 
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
+	<footer className="footer text-center">
+		<h3 className="signature">Made with <FaHeart className="text-danger" /> by JJFlor <FaLaptopCode /></h3>
 	</footer>
 );

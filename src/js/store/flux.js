@@ -62,7 +62,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				}
 			},
-			
+			addFavourites: (name) => {
+				const getFavs = getStore().favourites;
+				if (!favourites.includes(name)) {
+					const actualizFavs = [...getFavs, name];
+					setStore({ favourites: actualizFavs })
+				}
+			},
+			handleDeleteFav: (index) => {
+				const newFavs = getStore().favourites;
+				newFavs.splice(index, 1);
+				setStore({ favourites: newFavs });
+			}
 		}
 	};
 };

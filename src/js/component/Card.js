@@ -1,15 +1,13 @@
 import React, { useContext } from "react";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 
 
 
 export const Card = ({ name, uid, type, typeImg }) => {
-
-    const handleAddFav = ({ name }) => {
-        setStore({ favourites: { name } })
-    }
+    const { store, actions } = useContext(Context);
 
     return (
         <div className="row row-cols-1 row-cols-md-2 g-4">
@@ -21,7 +19,7 @@ export const Card = ({ name, uid, type, typeImg }) => {
                         <Link className="btn btn-outline-primary float-start" to={`/details/${type}/${uid}`}>
                             Learn more!
                         </Link>
-                        <button href="#" className="btn btn-outline-warning float-end" onClick={handleAddFav}><FaRegHeart /></button>
+                        <button href="#" className="btn btn-outline-warning float-end" onClick={() => actions.addFavourites(name)}><FaRegHeart /></button>
                     </div>
                 </div>
             </div>
