@@ -14,6 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					initial: "white"
 				}
 			],
+			favourites: [],
 		},
 		actions: {
 			getPeople: async () => {

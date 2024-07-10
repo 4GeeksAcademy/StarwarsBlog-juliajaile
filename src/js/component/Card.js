@@ -1,17 +1,16 @@
 import React, { useContext } from "react";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
+
 
 
 
 export const Card = ({ name, uid, type, typeImg }) => {
-    const { store, actions } = useContext(Context);
-    const handleAddFav = () =>{
-     setStore({name})
 
-
+    const handleAddFav = ({ name }) => {
+        setStore({ favourites: { name } })
     }
+
     return (
         <div className="row row-cols-1 row-cols-md-2 g-4">
             <div className="col">
