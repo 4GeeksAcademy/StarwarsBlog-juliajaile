@@ -9,7 +9,7 @@ import { FaRegHeart } from "react-icons/fa6";
 
 export const Details = () => {
     const { actions } = useContext(Context);
-    const { name, uid, type, typeImg } = useParams();
+    const { uid, type } = useParams();
 
     useEffect(() => {
         actions.getDetails(uid, type);

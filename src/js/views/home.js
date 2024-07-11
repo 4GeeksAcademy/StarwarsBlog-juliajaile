@@ -7,7 +7,7 @@ import SimpleBar from "simplebar-react";
 
 
 export const Home = () => {
-	const { store, actions } = useContext(Context);
+	const { store } = useContext(Context);
 	const styles = {
 		maxWidth: 2000,
 		width: "100%",

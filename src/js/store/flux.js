@@ -1,4 +1,4 @@
-const getState = ({ getStore, getActions, setStore }) => {
+const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			url: "https://www.swapi.tech/api",
@@ -64,9 +64,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			addFavourites: (name) => {
 				const getFavs = getStore().favourites;
-				if (!favourites.includes(name)) {
+				if (!getFavs.includes(name)) {
 					const actualizFavs = [...getFavs, name];
-					setStore({ favourites: actualizFavs })
+					setStore({ favourites: actualizFavs }
+					)
 				}
 			},
 			handleDeleteFav: (index) => {

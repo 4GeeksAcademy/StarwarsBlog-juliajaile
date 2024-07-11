@@ -7,7 +7,7 @@ import { Context } from "../store/appContext";
 
 
 export const Card = ({ name, uid, type, typeImg }) => {
-    const { store, actions } = useContext(Context);
+    const { actions } = useContext(Context);
 
     return (
         <div className="row row-cols-1 row-cols-md-2 g-4">
@@ -19,7 +19,7 @@ export const Card = ({ name, uid, type, typeImg }) => {
                         <Link className="btn btn-outline-primary float-start" to={`/details/${type}/${uid}`}>
                             Learn more!
                         </Link>
-                        <button href="#" className="btn btn-outline-warning float-end" onClick={() => actions.addFavourites(name)}><FaRegHeart /></button>
+                        <button className="btn btn-outline-warning float-end" onClick={() => actions.addFavourites(name)}><FaRegHeart /></button>
                     </div>
                 </div>
             </div>
