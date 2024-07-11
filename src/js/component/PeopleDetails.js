@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 export const PeopleDetails = () => {
     const { store, actions } = useContext(Context);
-    const { name, uid, type, typeImg } = useParams();
+    const { name, uid, type } = useParams();
 
     useEffect(() => {
         actions.getDetails(uid, type);
@@ -26,12 +26,12 @@ export const PeopleDetails = () => {
             </div>
             <hr className="text-danger" />
             <div className="d-flex flex-row ms-5 justify-content-center">
-                <div className="text-danger me-5">Name <br /> {store.details?.properties.name}</div>
-                <div className="text-danger me-5">Birth Year <br /> {store.details?.properties.birth_year} </div>
-                <div className="text-danger me-5">Gender <br /> {store.details?.properties.gender}</div>
-                <div className="text-danger me-5">Height <br /> {store.details?.properties.height}</div>
-                <div className="text-danger me-5">Skin Color <br /> {store.details?.properties.skin_color}</div>
-                <div className="text-danger me-5">Eye Color <br /> {store.details?.properties.eye_color}</div>
+                <div className="text-danger me-5"><strong>Name</strong> <br /> {store.details?.properties.name}</div>
+                <div className="text-danger me-5"><strong>Birth Year</strong> <br /> {store.details?.properties.birth_year} </div>
+                <div className="text-danger me-5"><strong>Gender</strong> <br /> {store.details?.properties.gender}</div>
+                <div className="text-danger me-5"><strong>Height</strong> <br /> {store.details?.properties.height}</div>
+                <div className="text-danger me-5"><strong>Skin Color</strong> <br /> {store.details?.properties.skin_color}</div>
+                <div className="text-danger me-5"><strong>Eye Color</strong> <br /> {store.details?.properties.eye_color}</div>
             </div>
         </div>
 

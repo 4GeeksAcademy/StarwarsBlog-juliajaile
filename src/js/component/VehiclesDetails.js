@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 export const VehiclesDetails = () => {
     const { store, actions } = useContext(Context);
-    const { name, uid, type, typeImg } = useParams();
+    const { name, uid, type } = useParams();
 
     useEffect(() => {
         actions.getDetails(uid, type);

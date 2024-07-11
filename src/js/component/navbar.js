@@ -19,12 +19,12 @@ export const Navbar = () => {
 				</button>
 				<ul className="dropdown-menu">
 					{store.favourites?.map((favourites, index) => (
-						<li key={index}>
+						<li className="ms-2" key={index}>
 							{favourites}
-							<button className="closing-btn" onClick={() => actions.handleDeleteFav(index)}><FaTrash /></button>
+							<button className="btn closing-btn mb-2" onClick={() => actions.handleDeleteFav(index)}><FaTrash /></button>
 						</li>
 					))}
-					{store.favourites?.length <= 0 && <li className="noAddedFavs ms-2">No favs yet!</li>}
+					{store.favourites?.length <= 0 && <li className="noAddedFavs ms-2 text-danger">No favs yet!</li>}
 				</ul>
 			</div>
 		</nav>

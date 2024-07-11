@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 import { PeopleDetails } from "../component/PeopleDetails";
 import { PlanetsDetails } from "../component/PlanetsDetails";
 import { VehiclesDetails } from "../component/VehiclesDetails";
-import { FaRegHeart } from "react-icons/fa6";
+import "../../styles/details.css";
 
 
 export const Details = () => {
@@ -24,10 +24,9 @@ export const Details = () => {
                     {type === 'people' ? <PeopleDetails /> : ''}
                     {type === 'planets' ? <PlanetsDetails /> : ''}
                     {type === 'vehicles' ? <VehiclesDetails /> : ''}
-                    <Link className="btn btn-outline-primary mt-4 me-5" to={"/"}>
+                    <Link className="btn btn-outline-primary goBackBtn" to={"/"}>
                         Go Back!
                     </Link>
-                    <button href="#" className="btn btn-outline-warning mt-4"><FaRegHeart /></button>
                 </div>
             </div>
         </div>

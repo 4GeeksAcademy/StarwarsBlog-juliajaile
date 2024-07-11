@@ -2,18 +2,6 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			url: "https://www.swapi.tech/api",
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
 			favourites: [],
 		},
 		actions: {
